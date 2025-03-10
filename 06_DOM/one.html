@@ -17,18 +17,18 @@
     <div ></div>
     <h1 id ="title" class = "heding">DOM Learning <span style = "display : none;">test text</span></h1>
     <h1 id ="title-2" class = "heding">DOM Learning <span style = "display : none;">test text</span></h1>
-    <h1 id ="title-3" class = "heding">DOM Learning <span style = "display : none;">test text</span></h1>
-    <h1 id ="title-4" class = "heding">DOM Learning <span style = "display : none;">test text</span></h1>
+    <!-- <h1 id ="title-3" class = "heding">DOM Learning <span style = "display : none;">test text</span></h1>
+    <h1 id ="title-4" class = "heding">DOM Learning <span style = "display : none;">test text</span></h1> -->
     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quaerat sed dolor consequatur cupiditate officiis
         explicabo ullam, porro laudantium dicta ea hic provident nam distinctio itaque mollitia incidunt voluptate
         magnam quis!</p>
 
-    <input type="password" name="" id="">
+    <input  type="password" name="" id="pass">
 
     <ul>
-        <li>one</li>
-        <li>two</li>
-        <li>three</li>
+        <li class = "list-item">two</li>
+        <li class = "list-item">three</li>
+        <li class = "list-item">one</li>
     </ul>
 
         <!-- 
@@ -57,7 +57,22 @@
         
         turnGreen.style.borderRadius = "15px"  => '15px'
         
-         -->
+        //to select multiple attribute we use querySelectorAll
+        ->But we can't perform looping, mapping operations on it
+        ->so we need to convert it into Array
+        const list = document.getElementsByClassName('list-item');
+
+        -> Array.from(list)
+
+        -> const converrtedArray =  Array.from(list)  //stored converted array into a variable
+
+        -> converrtedArray .forEach((l) => {
+                return l.style.backgroundColor = "green"
+            })
+
+            //now this will work
+        
+            -->
 
 </body>
 
