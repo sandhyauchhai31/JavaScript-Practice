@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .bg-dark{
+            background-color: black;
+            color : white;
+        }
+    </style>
+</head>
+<body class="bg-dark">
+    
+</body>
+<script>
+    // const div1 = document.createElement('div')
+    // console.log(div1);
+    // div1.className = "manin";
+    // div1.id = Math.round(Math.random() * 10 + 1) 
+    // div1.setAttribute("titile","title genertated")
+    // div1.style.backgroundColor = "green"
+    // div1.style.padding = "15px";
+    // div1.style.margin = "15px"
+    // const addText = document.createTextNode("Welcome Sandhya!")
+    // div1.appendChild(addText)
+    // document.body.appendChild(div1)
+
+    // to create any element in HTML using Javascript
+    const ele1 = document.createElement('div')
+    console.log(ele1);
+    ele1.className = "fav";
+    ele1.id = "myId";
+    ele1.style.padding = "15px"
+    ele1.style.margin = "15px";
+    ele1.style.borderRadius = "15px"
+    ele1.style.backgroundColor = "green"
+    const textNode = document.createTextNode("Welcome Sandhya!")
+    ele1.appendChild(textNode)
+    document.body.appendChild(ele1)
+
+
+    for (let i = 0; i < 10; i++) {
+        // console.log(i);
+        const newElement = document.createElement('div')
+        // console.log(newElement);
+        newElement.className = "main"
+        newElement.id = "myID"
+        newElement.style.backgroundColor = "green"
+        newElement.style.padding = "15px"
+        newElement.style.margin = "15px"
+        newElement.style.borderRadius = "15px"
+        // newElement.innerText = "Hello Sandy"
+        document.body.appendChild(newElement)
+        const txt = document.createTextNode("Hey Sandhya!")
+        newElement.appendChild(txt)
+        
+        
+    }
+    
+
+    
+    
+    
+</script>
+</html>
