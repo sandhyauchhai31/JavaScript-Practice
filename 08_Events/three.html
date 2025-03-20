@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+</head>
+<body>
+    <!-- <h1>Chai aur JS</h1> -->
+    <button id = "start">Start</button>
+    <button id = "stop">Stop</button>
+</body>
+<script>
+    // here we can't stop every time interval code will run util we give it a clear interval
+    // const sayDate = function(str){
+    //     console.log(str,Date.now());       
+    // }
+    
+    // const intervalId = setInterval(sayDate,2000,"Hi Sandhya")
+    // clearInterval(intervalId)
+
+    let interVal;
+
+    function intervalId(){
+            const ele = document.createElement('h1')
+            ele.innerText = `He Sandhya You are the Best! ${Date.now()}`
+            document.body.appendChild(ele)
+
+            console.log("hey Sandha you are the Best!",Date.now());          
+        }
+
+    document.querySelector('#start').addEventListener('click',function(){
+        interVal = setInterval(intervalId,1000)
+    })
+    document.querySelector('#stop').addEventListener('click',function(){
+        clearInterval(interVal)
+        console.log("STOPPED");
+        const ele = document.createElement('h1')
+            ele.innerText = `STOPPED! ${Date.now()}`
+            document.body.appendChild(ele)
+        
+    })
+
+    
+</script>
+</html>
