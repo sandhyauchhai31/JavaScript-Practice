@@ -12,6 +12,7 @@
 </body>
 <script>
     //first generate a random color
+    let bgChanger;
     const randomColor = function () {
         const hex = "0123456789ABCDEF"
         let color = "#"
@@ -22,6 +23,27 @@
     }
 
     console.log(randomColor());
+    
+    const startChangaingColor = function (){
+        if (!bgChanger) {
+            bgChanger = setInterval(setBgColor,1000]
+        }
+        
+        function setBgColor(){
+            document.body.style.backgroundColor = randomColor()
+        }
+    }
+    
+    const stopChangaingColor = function (){
+        clearInterval(bgChanger)
+        bgChanger = null;
+        const msg = document.createElement('h1')
+        msg.innerText = "Stopped";
+        document.body.appendChild(msg)
+    }
+
+    document.querySelector('#start').addEventListener('click',startChangaingColor);
+    document.querySelector('#stop').addEventListener('click',stopChangaingColor);
     
 
 
